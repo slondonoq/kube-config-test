@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: soundunder
+  name: audio
+spec:
+  selector:
+    matchLabels:
+      app: soundunder
+  template:
+    metadata:
+      labels:
+        app: soundunder
+    spec:
+      containers:
+      - name: audio
+        image: us-central1-docker.pkg.dev/clustertest-1/test-repo/audio_ms
+        ports:
+        - containerPort: 80
+          name: audio

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: soundunder
+  name: gateway
+spec:
+  selector:
+    matchLabels:
+      app: soundunder
+  template:
+    metadata:
+      labels:
+        app: soundunder
+    spec:
+      containers:
+      - name: gateway
+        image: us-central1-docker.pkg.dev/clustertest-1/test-repo/ag
+        ports:
+        - containerPort: 80
+          name: gateway

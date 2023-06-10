@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: audio
+  labels:
+    app: soundunder
+spec:
+  selector:
+    app: soundunder
+  ports:
+  - port: 8080
+    targetPort: 80
+    name: "audio-service"
