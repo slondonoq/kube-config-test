@@ -16,6 +16,3 @@ spec:
       containers:
       - name: gateway
         image: us-central1-docker.pkg.dev/clustertest-1/test-repo/ag
-        ports:
-        - containerPort: 80
-          name: gateway
